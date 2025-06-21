@@ -52,7 +52,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/my-todo-app-angular/"
+              "baseHref": "/task-trek-angular/"
             },
             "development": {
               "optimization": false,
