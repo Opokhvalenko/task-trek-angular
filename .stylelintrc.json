@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "include", "mixin", "each", "for", "if", "else", "while", "extend", "at-root",
+          "function", "return", "use", "forward", "content", "debug", "warn", "error",
+          "tailwind", "apply", "variants", "responsive", "screen"
+        ]
+      }
+    ],
+    "scss/at-if-no-null": null,
+    "no-descending-specificity": null,
+    "block-no-empty": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global", "deep"]
+      }
+    ],
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": [
+          "map-get",
+          "rem",
+          "em",
+          "var",
+          "env"
+        ]
+      }
+    ],
+    "color-function-alias-notation": null,
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "font-family-name-quotes": "always-where-required",
+    "media-feature-range-notation": null,
+    "selector-class-pattern": "^[a-z]+(?:-[a-z]+)*(?:__[a-z]+(?:-[a-z]+)*)?(?:--[a-z]+(?:-[a-z]+)*)?$",
+    "at-rule-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "property-no-vendor-prefix": null,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "length-zero-no-unit": null
+  }
+}

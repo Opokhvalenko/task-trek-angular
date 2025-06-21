@@ -1,0 +1,49 @@
+<div class="todoapp">
+  <div class="todoapp__content">
+    <header class="todoapp__header">
+      <ng-container
+        *ngIf="{
+          activeCount: activeCount$ | async,
+          todos: todos$ | async,
+        } as data"
+      >
+        <button
+          class="todoapp__toggle-all"
+          [class.active]="
+            data.activeCount === 0 && data.todos && data.todos.length > 0
+          "
+          (click)="toggleAllCompleted()"
+        > </button>
+      </ng-container>
+      <app-todo-form (save)="addTodo($event)"></app-todo-form>
+    </header>
+
+    <section class="todoapp__main">
+      <app-todo
+        *ngFor="
+          let todo of visibleTodos$ | async;
+          let i = index;
+          trackBy: trackById
+        "
+        [todo]="todo"
+        (todoDelete)="deleteTodo(todo)"
+        (todoRename)="renameTodo($event.todo, $event.title)"
+        (todoToggle)="toggleTodo(todo)"
+      ></app-todo>
+    </section>
+
+    <footer class="todoapp__footer">
+      <span class="todoapp__active-count">
+        {{ activeCount$ | async }} items left
+      </span>
+
+      <app-filter></app-filter>
+
+      <button class="todoapp__clear-completed" (click)="clearCompletedTodos()">
+        Clear completed
+      </button>
+    </footer>
+  </div>
+
+  <app-message></app-message>
+</div>

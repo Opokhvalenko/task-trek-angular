@@ -1,0 +1,24 @@
+@use 'bulma/bulma';
+
+@use './styles/todoapp';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.4em;
+  color: #4d4d4d;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+iframe {
+  display: none;
+}
