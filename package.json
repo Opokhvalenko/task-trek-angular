@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:ssr": "ng build --output-path dist && ng run task-trek-angular:server",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:task-trek-angular": "node dist/task-trek-angular/server/server.mjs",

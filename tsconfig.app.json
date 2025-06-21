@@ -6,7 +6,11 @@
     "outDir": "./out-tsc/app",
     "types": [
       "node"
-    ]
+    ],
+    "target": "ES2022",
+    "useDefineForClassFields": false,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler"
   },
   "files": [
     "src/main.ts",
@@ -15,6 +19,7 @@
   ],
   "include": [
     "src/**/*.d.ts",
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/polyfills.ts"
   ]
 }
